@@ -74,6 +74,7 @@ public class CommentServiceImpl implements CommentService {
 
     public void selectByMongoTemplate() {
         Comment comment = new Comment();
+        comment.setContent("111111");
         mongoTemplate.save(comment);
     }
 }
