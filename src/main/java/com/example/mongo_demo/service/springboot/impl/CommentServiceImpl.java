@@ -71,4 +71,9 @@ public class CommentServiceImpl implements CommentService {
     public List<Comment> selectAllByMongoTemplate() {
         return mongoTemplate.findAll(Comment.class, mongoTemplate.getCollectionName(Comment.class));
     }
+
+    public void selectByMongoTemplate() {
+        Comment comment = new Comment();
+        mongoTemplate.save(comment);
+    }
 }
